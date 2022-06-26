@@ -1,0 +1,125 @@
+:root{
+    --outfit: 'Outfit', sans-serif;
+    --softBlue: hsl(215, 51%, 70%);
+    --syan: hsl(178, 100%, 50%);
+    --veryDarkBlue1: hsl(217, 54%, 11%);
+    --veryDarkBlue2: hsl(216, 50%, 16%);
+    --veryDarkBlue3: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--veryDarkBlue1);
+    font-family: var(--outfit);
+    color: var(--softBlue);
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 350px;
+    background-color: var(--veryDarkBlue2);
+    padding: 20px;
+    border-radius: 10px;
+}
+.card > figure {
+    width: 310px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card > figure > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+.hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0; 
+    background-color: hsl(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover > img{
+    height: 50px;
+}
+.hover:hover{
+    opacity: 1;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0;
+}
+.content > h1{
+    color: var(--white);
+    margin: 15px 0;
+    font-weight: 600;
+    transition: .5s;
+    font-size: 25px;
+}
+.content > h1:hover{
+    cursor: pointer;
+    color: var(--syan);
+}
+.content > p{
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.price, .time{
+    display: flex;
+    align-items: center;
+}
+.price > img, .time > img{
+    margin-right: 10px;
+}
+.price > p{
+    color: var(--syan);
+}
+.creator{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--veryDarkBlue3);
+    padding-top: 15px;
+}
+.creator > img{
+    width: 35px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.creator > p{
+    font-weight: 300;
+}
+.creator > p > span{
+    color: var(--white);
+    transition: .5s;
+}
+.creator > p > span:hover{
+    cursor: pointer;
+    color: var(--syan);
+}
